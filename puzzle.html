@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Портал Имперской Гвардии/Warhammer40K</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		var result = 0;
+
+		function AskQuestion(textBoxId, answer)
+		{
+			var userAnswer = document.getElementById(textBoxId).value;
+			if(userAnswer == answer)
+				result++;
+
+		}
+
+		function AskQuestions()
+		{
+			AskQuestion("userAnswer1", "Да");
+			AskQuestion("userAnswer2", "Комиссар");
+		
+
+			if(result == 2)
+				alert('Вы прошли испытание на отлично. Можете быть покойны!')	;
+			else if(result == 1)
+				alert('Вы сплоховали. Инквизиция проведет с Вами беседу.')	;
+			else 
+				alert('Вы обвиняетесь в ереси!');
+		}		
+
+		/*function AskQuestions()
+		{
+			var userAnswer = document.getElementById("userAnswer1").value;
+			var result = 0;
+			if(userAnswer == "Да")
+				result++;
+
+			userAnswer = document.getElementById("userAnswer2").value;
+			if(userAnswer == "Комиссар")
+				result++;
+			
+
+			if(result == 2)
+				alert('Вы прошли тест! Да хранит вас Император!')	;
+			else if(result == 1)
+				alert('Вы оплошали. Инквизиция проведет с вами беседу.')	;
+			else 
+				alert('Вы подозреваетесь в ереси!');
+		}*/
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="site.html">Главная</a><span>/</span>
+		<a href="#">Тест Инквизиции</a><span>/</span>
+		<a href="guess.html">Тест Омниссии</a><span>/</span>
+		<a href="guess-2.html">Тест Омниссии для двоих</a><span>/</span>
+	</div>
+	 <div id="center">                    
+	    <img src="img/photoINC.png"></img> </div>
+<div id="content">
+	<h1>Портал Имперской Гвардии/Warhammer40K</h1>  
+    <div id="center">	
+		<h3>Тест Инквизиции</h3>   			
+	    <div id="box">
+	    	<h5>Тест Инквизиции</h5>
+	    	<p>Веруете ли Вы в его святейшество Императора и готовы ли нести его волю?</p>
+	    	<input type="text" id="userAnswer1">
+
+            <p>Кто имеет право казнить любого гвардейца на поле брани за трусость или отступление от правил 
+			и кто поддерживает порядок во время боя?</p>
+            <input type="text" id="userAnswer2">
+
+            <br><br/>
+            <a href="#" onclick="AskQuestions();">Отправить</a>
+	    </div>
+</div>
+</div>
+
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>

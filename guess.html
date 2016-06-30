@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Портал Имперской Гвардии/Warhammer40K</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+	
+		
+		function Play()
+		{	
+			var answer = parseInt(Math.random() * 100);
+			var plyaerNum = 1;
+			while(true){
+				var userAnswer = prompt('Проверьте свое слияние с Омниссией!.Введите число от 0 до 100. Для выхода нажмите q');
+
+				if(userAnswer == 'q')
+					break;
+				if(userAnswer > answer){
+					alert('Ваше число слишком большое');
+				} else if(userAnswer < answer){
+					alert('Ваше число слишком маленькое');
+				} else if(userAnswer == answer){
+					alert('Вы угадали, поздравляю! Вы поняли Омниссию.');
+					break;
+				}
+
+				
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="site.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Инквизиция вопрошает</a><span>/</span>
+		<a href="#">Тест Омниссии</a><span>/</span>
+		<a href="guess-2.html">Тест Омниссии для двоих.</a><span>/</span>  
+	</div>
+<div id="content">
+<img src="img/photoMEH2.png"></img>
+	<h1>Портал Имперской Гвардии/Warhammer40K</h1> 
+	
+    <div id="center">	
+		<h3>Тест Омниссии</h3>	<img src="img/photoMEH.png"></img>		
+	    <div id="box">
+	    	<p>У вас будет неограниченное количество попыток, чтобы угадать число, загаданное Богом-Машиной.</p>
+            <br><br/>
+            <a href="#" onclick="Play();">Начать игру</a>  
+	    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
